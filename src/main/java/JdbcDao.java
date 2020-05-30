@@ -15,8 +15,8 @@ public class JdbcDao {
                 .getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD)) {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_QUERY);
-            preparedStatement.setString(2, email);
-            preparedStatement.setString(3, password);
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
             System.out.println("prepared statement::" + preparedStatement);
 
             preparedStatement.executeUpdate();
