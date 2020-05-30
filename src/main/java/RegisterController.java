@@ -5,8 +5,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
 
-import java.awt.event.ActionEvent;
-
 public class RegisterController {
 
     @FXML
@@ -20,13 +18,27 @@ public class RegisterController {
 
 
     @FXML
-    public void register(ActionEvent actionEvent) {
+    public void register(javafx.event.ActionEvent actionEvent) {
         Window window = submitButton.getScene().getWindow();
 
-        if(fullNameField.getText().isEmpty()){
-            Alert(Alert.AlertType.ERROR,window,"Error","Name cannot be empty");
+        if (fullNameField.getText().isEmpty()) {
+            Alert(Alert.AlertType.ERROR, window, "Error", "Name cannot be empty");
             return;
         }
+        if (emailIdField.getText().isEmpty()) {
+            Alert(Alert.AlertType.ERROR, window, "Error", "Email cannot be empty");
+            return;
+        }
+        if (passwordField.getText().isEmpty()) {
+            Alert(Alert.AlertType.ERROR, window, "Error", "Please enter password");
+            return;
+        }
+
+
+        String fullName = fullNameField.getText();
+        String email = emailIdField.getText();
+        String password = passwordField.getText();
+
 
     }
 
