@@ -23,7 +23,6 @@ public class JdbcDao {
 
             preparedStatement.executeUpdate();
 
-
         } catch (SQLException e) {
             //todo: put alert with message
             System.out.println(e.getMessage() + e.getSQLState() + e.getErrorCode());

@@ -55,7 +55,9 @@
             GridPane.halignment="CENTER"
             onAction="#register">
         <GridPane.margin>
-            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+            <Insets top="20" right="0" bottom="20" left="0">
+
+            </Insets>
         </GridPane.margin>
     </Button>
 </GridPane>
