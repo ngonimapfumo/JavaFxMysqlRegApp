@@ -39,6 +39,9 @@ public class RegisterController {
         String email = emailIdField.getText();
         String password = passwordField.getText();
 
+        JdbcDao jdbcDao = new JdbcDao();
+        jdbcDao.insertData(fullName, email, password);
+
 
     }
 
