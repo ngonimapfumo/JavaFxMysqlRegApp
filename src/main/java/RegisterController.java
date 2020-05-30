@@ -5,6 +5,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
 
+import java.sql.SQLException;
+
 public class RegisterController {
 
     @FXML
@@ -18,7 +20,7 @@ public class RegisterController {
 
 
     @FXML
-    public void register(javafx.event.ActionEvent actionEvent) {
+    public void register(javafx.event.ActionEvent actionEvent) throws SQLException {
         Window window = submitButton.getScene().getWindow();
 
         if (fullNameField.getText().isEmpty()) {
